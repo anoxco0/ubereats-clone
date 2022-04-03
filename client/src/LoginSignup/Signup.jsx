@@ -21,9 +21,7 @@ export const Signup = () => {
     let {id,value}=e.target;
     setsignup((prev)=>({...prev,[id]:value}))
   };
-  console.log(signup)
   const handlesubmit = (e) => {
-    console.log(e.target.innerHTML)
     if(e.target.innerHTML === "Next"){
       axios.post("http://localhost:2345/register",signup)
     .then((res)=>{

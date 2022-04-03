@@ -4,7 +4,6 @@ import { Bussiness } from "../components/Bussiness"
 import { Footer } from "../components/Footer"
 import { Maps } from "../components/Maps"
 import { Navbar } from "../components/Navbar"
-import { Product } from "../components/Product"
 import { navSearch, setNavBg } from "../redux/action"
 
 
@@ -20,10 +19,8 @@ export const HomePage = ()=>{
            dispatch(setNavBg('white'))
         else
             dispatch(setNavBg('transparent'))     
-        //   console.log(event.target.scrollTop)
     }
     return (
-        // overflowY: 'scroll', maxHeight: '100vh',
         <div 
             onScroll={(e)=>{handleScroll(e)}}
             style={{
@@ -34,7 +31,6 @@ export const HomePage = ()=>{
             <Bussiness/>
             <Maps />
             <Footer />
-            {/* <Product/> */}
         </div>
     )
 }

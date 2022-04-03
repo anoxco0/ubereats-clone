@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
   let email=localStorage.getItem("email");
-  console.log(email)
   const navigate=useNavigate();
   const [pass,setpass]=useState("")
   const handlechange=(e)=>{

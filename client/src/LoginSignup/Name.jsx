@@ -24,8 +24,6 @@ export const Name = ()=>{
     })
     signup.email=useSelector((store)=>store.email.email);
     signup.password=useSelector((store)=>store.password.password);
-    // const dispatch = useDispatch();
-    console.log(signup)
     useEffect(()=>{
     },[setBgColor,setColor])
     const handlechange = (e) => {

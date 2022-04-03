@@ -36,7 +36,6 @@ export const OTP = () => {
   }
   
   const otpReady = (otp.one+otp.two+otp.three+otp.four);
-  console.log(otpReady)
   useEffect(()=>{
   if(otpReady.length===4){
     setJumpStatus(true);
@@ -56,9 +55,7 @@ export const OTP = () => {
   useEffect(()=>{
     if (otpReady === data.otp) {
       localStorage.setItem("email",data.email);
-      console.log('hello',data.otp)
       fetch(`/user/${data.email}`).then((res) => res.json()).then((tdata)=>{
-        console.log(tdata.length);
         if(tdata.length!==0) dispatch(emailStatus(true))
         else dispatch(emailStatus(false))
       })

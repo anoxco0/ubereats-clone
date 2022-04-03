@@ -8,7 +8,6 @@ export const ProductDetails=()=>{
     const navigate= useNavigate()
     const [prod,setProd]=useState({});
     const {id}=useParams();
-    console.log(id)
     useEffect(()=>{
       fetch(`/products/${id}`).then((res)=>res.json()).then((data)=>{setProd(data[0])})
     },[id]);

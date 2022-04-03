@@ -7,7 +7,6 @@ import { Nav } from "./Nav"
 
 export const Password = ()=>{
     const emailStatus=useSelector(store=>store.emailStatus.emailStatus)
-    console.log('status', emailStatus)
     const [bgcolor, setBgColor]=useState('#EEEEEE');
     const [color,setColor] = useState('#AFAFAF');
     const [jumpStatus, setJumpStatus] = useState(false);
@@ -16,7 +15,6 @@ export const Password = ()=>{
     const dispatch = useDispatch();
     useEffect(()=>{
     },[setBgColor,setColor])
-    console.log(pass)
     const handlechange = (e) => {
         setPass(e.target.value)
         if(e.target.value.length>0){

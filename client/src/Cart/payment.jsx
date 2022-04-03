@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import './payment.css';
 
 
@@ -9,13 +9,11 @@ import './payment.css';
 export const Payment = () =>{
     const [count,setCount] = useState(1);
     const navigate = useNavigate();
-    const [cart,setCart] = useState(0);
     const countHandle=(value)=>{
         if(value===-1&&count===1){}
         else setCount(count+value)
     }
     const data = JSON.parse(localStorage.getItem('uber'));
-    console.log(data);
 
     const lastChange = ()=>{
         alert('thank You ')
@@ -35,8 +33,8 @@ export const Payment = () =>{
             <div className='bigPaymentbox'>
                 <div className='leftPayment'>
                     <div className='payprod'>
-                       {data.map((e)=>
-                           <>
+                       {data.map((e,i)=>
+                           <div key={i}>
                              <div width='100px'> <img width={'100px'} src={e.img} alt="" /> </div>
                              <div style={{display:'flex'}}>
                                  <div style={{margin:"12px"}}>{count}</div>
@@ -48,7 +46,7 @@ export const Payment = () =>{
                              <div><div>title: { e.name}</div>
                              <div>price: {e.price}</div></div>
                              
-                           </>
+                           </div>
                        )}
                     </div>
                 </div>
@@ -74,7 +72,7 @@ export const Payment = () =>{
                         <div style={{fontSize:'16px',lineHeight:'24px'}}>Taxes</div>
                         <div style={{fontSize:'16px',lineHeight:'24px'}}>CA$0.76</div>
                     </div>
-                    <hr style={{width:'70%'}} />
+                    <hr width='70%'/>
                     <div>
                         <div style={{fontSize:'16px',lineHeight:'20px',fontWeight:'500'}}>Add a tip</div>
                         <div iv style={{fontSize:'16px',lineHeight:'20px',fontWeight:'500'}}>CA$3.20</div>
@@ -88,8 +86,8 @@ export const Payment = () =>{
                         <button>Other</button>
                     </div>
                     <div>
-                        <div iv style={{fontSize:'20px',lineHeight:'28px',fontWeight:'500'}}>Total</div>
-                        <div iv style={{fontSize:'20px',lineHeight:'28px',fontWeight:'500'}}>CA${55.95}</div>
+                        <div style={{fontSize:'20px',lineHeight:'28px',fontWeight:'500'}}>Total</div>
+                        <div style={{fontSize:'20px',lineHeight:'28px',fontWeight:'500'}}>CA${55.95}</div>
                     </div>
                 </div>
             </div>

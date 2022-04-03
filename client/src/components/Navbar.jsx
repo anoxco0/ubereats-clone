@@ -6,7 +6,6 @@ import './navbaar.css'
 
 export const Navbar = ()=>{
     const user = JSON.parse(localStorage.getItem('user'));
-  console.log(user)
     const dispatch = useDispatch();
     const setBg = useSelector(({setNavBg})=>setNavBg.setNavBg)
     const [focused, setFocused] = useState(false)

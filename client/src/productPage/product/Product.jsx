@@ -257,8 +257,6 @@ const rating =()=>{
             <h1>Today's Offer</h1>
             <div className="prodiv" style={{height:'500px', overflow:"scroll",}}>
                 {prod.map((e)=>{
-                    console.log(e)
-                    console.log(e,'elements')
                     return <Link className="link" key={e.id} to={`/product/${e.id}`}>
                         <div className="prduct" key={e._id}>
                         <div className="pdimage"><img  height= "190px"

@@ -30,7 +30,6 @@ export const Email = () => {
       setJumpStatus(false);
     }
   };
-  // console.log(email);
   const handlesubmit = (e) => {
     if(jumpStatus){
       fetch("/mailer",{
@@ -41,8 +40,8 @@ export const Email = () => {
         method: "POST",
         body: JSON.stringify({ email: temail, otp: otp })
     })
-    .then(function(res){ console.log(res) })
-    .catch(function(res){ console.log(res) })
+    .then(function(res){ })
+    .catch(function(res){ })
       
      
       navigate("/otp");
