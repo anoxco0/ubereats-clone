@@ -51,7 +51,6 @@ export const OTP = () => {
     document.querySelector('.navbtn').style.cursor='not-allowed'
   }
   }
-  const [otpData,setOtpData] = useState([])
   useEffect(()=>{
     if (otpReady === data.otp) {
       localStorage.setItem("email",data.email);
@@ -63,7 +62,7 @@ export const OTP = () => {
       navigate("/Password")
     }
 
-  },[data.email, data.otp, navigate, otpData, otpReady])
+  },[data.email, data.otp, dispatch, navigate, otpReady])
 
 
   return (

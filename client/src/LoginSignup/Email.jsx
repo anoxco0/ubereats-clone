@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Nav } from "./Nav";
 import './mail.css';
 import { useDispatch } from "react-redux";
-import { email, emailStatus } from "../redux/action";
+import { email } from "../redux/action";
 
 export const Email = () => {
   const dispatch = useDispatch();

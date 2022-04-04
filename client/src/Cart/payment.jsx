@@ -25,9 +25,8 @@ export const Payment = () =>{
         <div >
             <div>
                 <div>
-                <span style={{margin:'20px'}} className="material-icons-outlined">west</span>
-                <img src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/8b969d35d373b512664b78f912f19abc.svg" alt="" />
-                 
+                    <span style={{margin:'20px'}} className="material-icons-outlined">west</span>
+                    <img src="https://d3i4yxtzktqr9n.cloudfront.net/web-eats-v2/8b969d35d373b512664b78f912f19abc.svg" alt="" />
                 </div>
             </div>
             <div className='bigPaymentbox'>
@@ -75,7 +74,7 @@ export const Payment = () =>{
                     <hr width='70%'/>
                     <div>
                         <div style={{fontSize:'16px',lineHeight:'20px',fontWeight:'500'}}>Add a tip</div>
-                        <div iv style={{fontSize:'16px',lineHeight:'20px',fontWeight:'500'}}>CA$3.20</div>
+                        <div style={{fontSize:'16px',lineHeight:'20px',fontWeight:'500'}}>CA$3.20</div>
                     </div>
                     <div style={{fontSize:'12px',lineHeight:'20px',color:'#757575'}}>Delivery people are critical to our communities at this time. Add a tip to say thanks.</div>
                     <div className='rightbtns'>
@@ -87,7 +86,7 @@ export const Payment = () =>{
                     </div>
                     <div>
                         <div style={{fontSize:'20px',lineHeight:'28px',fontWeight:'500'}}>Total</div>
-                        <div style={{fontSize:'20px',lineHeight:'28px',fontWeight:'500'}}>CA${55.95}</div>
+                        <div style={{fontSize:'20px',lineHeight:'28px',fontWeight:'500'}}>CA$55.95</div>
                     </div>
                 </div>
             </div>

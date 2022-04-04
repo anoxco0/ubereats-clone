@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Navbar } from "../navbarProd/navbar";
 import { IoStarSharp } from "react-icons/io5";
 import { nanoid } from "nanoid";
 
 export const ProductDetails=()=>{
-    const navigate= useNavigate()
     const [prod,setProd]=useState({});
     const {id}=useParams();
     useEffect(()=>{

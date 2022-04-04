@@ -11,10 +11,6 @@ export const Name = ()=>{
     const [bgcolor, setBgColor]=useState('#EEEEEE');
     const [color,setColor] = useState('#AFAFAF');
     const [jumpStatus, setJumpStatus] = useState(false);
-    const [name,setName] = useState({
-       firstName:'',
-       lastName:''
-    })
 
     const [signup,setSignup] = useState({
         firstName:'',

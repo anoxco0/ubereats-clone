@@ -23,7 +23,7 @@ export const Product=()=>{
         if (buttonClickedOutside) {
           dispatch((pageStatus(false)))
         }
-      }, [buttonClickedOutside]);
+      }, [buttonClickedOutside, dispatch]);
     const data=[
         {
             img:"https://d4p17acsd5wyj.cloudfront.net/shortcuts/deals.png",
@@ -100,104 +100,7 @@ export const Product=()=>{
      },
     ];
 
-//    const prod=[
-//         {img:"https://d1ralsognjng37.cloudfront.net/6a2972f8-55a5-4fd3-8625-60a123493fb5.jpeg",
-//         title:"Chick-Fil-A (660 S fig)",
-//         rating:4.7,
-//         time:25,
-//         del:"$ 0"
-//         },
-//         {img:"https://tb-static.uber.com/prod/image-proc/processed_images/1584c978a66f6cf3ae2945aaef9e282b/c73ecc27d2a9eaa735b1ee95304ba588.jpeg",
-//         title:"Shake Shack (400 W. 8th Street)",
-//         rating:4.5,
-//         time:27,
-//         del:"$ 0.49"
-//         },
-//         {img:"https://d1ralsognjng37.cloudfront.net/0e9dfbc2-0d7c-40ce-a9b4-f314ec9e59bc.jpeg",
-//         title:"7-Eleven (1463 W 3Rd St)",
-//         rating:4.6,
-//         time:20,
-//         del:"$ 0.49"
-//         },
-//         {img:"https://tb-static.uber.com/prod/image-proc/processed_images/ff588a5599682276f2ba3ffaa012b9ce/445a4b2618e10f7db95d4f17a85b117d.jpeg",
-//         title:"Popeyes (2532 S Figueroa St)",
-//         rating:4.0,
-//         time:35,
-//         del:"$ 0"
-//         },
-//         {img:"https://d1ralsognjng37.cloudfront.net/f1907bdd-e377-4dcc-83fc-caf39f25b342",
-//         title:"Tender Greens (505 W 6th St.)",
-//         rating:4.7,
-//         time:25,
-//         del:"$ 0"
-//         },
-//         {img:"https://d1ralsognjng37.cloudfront.net/6adb2c03-735d-4937-a267-227a238a9f6c.jpeg",
-//         title:"Calif. Chicken Cafe LA..",
-//         rating:4.7,
-//         time:25,
-//         del:"$ 0"
-//         },
-//         {img:"https://duyt4h9nfnj50.cloudfront.net/resized/1533836274564-w1080-8f.jpg",
-//         title:"LA Cafe",
-//         rating:4.74,
-//         time:25,
-//         del:"$ 0"
-//         },
-//         {img:"https://d1ralsognjng37.cloudfront.net/d9f46cfc-faf2-4867-bab2-2c1617720d93.jpeg",
-//         title:"Silverlake Ramen (DTLA)",
-//         rating:4.8,
-//         time:30,
-//         del:"$ 0"
-//         },
-//         {img:"https://d1ralsognjng37.cloudfront.net/39761e52-6da4-4266-ab6e-22160e3b687d.jpeg",
-//         title:"New Golden Lake Eatery",
-//         rating:4.6,
-//         time:25,
-//         del:"$ 0"
-//         },
-//         {img:"https://d1ralsognjng37.cloudfront.net/4b622271-3776-4f65-bc8d-1d14f3383699.jpeg",
-//         title:"Bossa Nova Brazilian",
-//         rating:4.7,
-//         time:40,
-//         del:"$ 0"
-//         },
-//         {img:"https://d1ralsognjng37.cloudfront.net/8f27e3dd-696b-4009-bfe5-4dc85372314a.jpeg",
-//         title:"BEST FCKN PIZZA",
-//         rating:4.5,
-//         time:45,
-//         del:"$ 6.49"
-//         },
-//         {img:"https://d1ralsognjng37.cloudfront.net/6f8556ed-ded6-40f1-a788-c3ae2c09e8cc.jpeg",
-//         title:"Fatburger & Buffalo's",
-//         rating:4.0,
-//         time:35,
-//         del:"$ 0"
-//         },
-//         {img:"https://d1ralsognjng37.cloudfront.net/84551c12-3705-46ca-93e2-79efc49d8973.jpeg",
-//         title:"SushiStop (Hollywood)",
-//         rating:4.7,
-//         time:38,
-//         del:"$ 0"
-//         },
-//         {img:"https://d1ralsognjng37.cloudfront.net/1ce9c150-2e08-4384-b93d-8ee490f580f7.jpeg",
-//         title:"ITALIAN PASTA CO.",
-//         rating:4.7,
-//         time:25,
-//         del:"$ 5.49"
-//         },
-//         {img:"https://d1ralsognjng37.cloudfront.net/f5e9d749-0eb2-4d4b-b3b6-2df8f477dec7.jpeg",
-//         title:"SushiStop Burbank",
-//         rating:4.1,
-//         time:28,
-//         del:"$ 7.0"
-//         },
-//         {img:"https://d1ralsognjng37.cloudfront.net/dfade57d-4304-460d-8b07-ded71cbe8483.jpeg",
-//         title:"Jack in the Box",
-//         rating:4.2,
-//         time:20,
-//         del:"$ 10"
-//         }
-//     ];
+
 const rating =()=>{
     
         const d=prod.sort((a,b)=>{
