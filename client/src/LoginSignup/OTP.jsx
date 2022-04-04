@@ -59,7 +59,7 @@ export const OTP = () => {
         else dispatch(emailStatus(false))
       })
 
-      navigate("/Password")
+      navigate("/password")
     }
 
   },[data.email, data.otp, dispatch, navigate, otpReady])
