@@ -1,5 +1,6 @@
 import { useState,useEffect, useRef } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom';
 import { pageStatus } from '../redux/action';
 import './base.css'
 import { Login } from './Login'
@@ -13,7 +14,7 @@ export const Base = ()=>{
     const dispatch = useDispatch();
     const buttonRef = useRef(null);
     const buttonClickedOutside = useOutsideClick(buttonRef);
-  
+    const navigate = useNavigate()
     useEffect(() => {
       // if the the click was outside of the button
       // do whatever you want
@@ -33,7 +34,6 @@ useEffect(() => {
     return () => window.removeEventListener('resize', handleResize)
 }, [])
     
-  
     return(
         <div 
            className='base'
@@ -55,7 +55,7 @@ useEffect(() => {
                 <div id='inparea'>
                 {/* box-shadow: 0 0 1px #fff inset */}
                    <SearchBox />
-                    <button>Find Food</button>
+                    <button onClick={()=>navigate('/product')}>Find Food</button>
                 </div>
                 <div id='subbasesign'>Sign in for your recent addresses</div>
            </div>
