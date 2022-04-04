@@ -42,3 +42,9 @@
 .abhibtn button:hover{
     background-color: #545454;
 }
+
+@media only screen and (max-width:1224px){
+    .abhiemail{
+        width: 40%;
+    }
+}

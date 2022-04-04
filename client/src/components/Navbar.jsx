@@ -5,7 +5,12 @@ import { pageStatus } from '../redux/action';
 import './navbaar.css'
 
 export const Navbar = ()=>{
+    if(!JSON.parse(localStorage.getItem('user'))) {
+
+        localStorage.setItem('user', JSON.stringify('lock'))
+    }
     const user = JSON.parse(localStorage.getItem('user'));
+
     const dispatch = useDispatch();
     const setBg = useSelector(({setNavBg})=>setNavBg.setNavBg)
     const [focused, setFocused] = useState(false)
