@@ -48,3 +48,23 @@
         width: 40%;
     }
 }
+@media only screen and (max-width:730px){
+    .abhiemail{
+        width: 50%;
+    }
+}
+@media only screen and (max-width:580px){
+    .abhiemail{
+        width: 70%;
+    }
+}
+@media only screen and (max-width:420px){
+    .abhiemail{
+        width: 80%;
+    }
+}
+@media only screen and (max-height:540px){
+    .abhiemail{
+        height: 540px;
+    }
+}

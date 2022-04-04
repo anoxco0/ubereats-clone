@@ -69,7 +69,7 @@ export const OTP = () => {
     <div className="abhiOtp">
       <Nav />
       <div className="abhiemail">
-        <div id="whatmail">Enter the 4-digit code sent to you at your email:</div>
+        <div id="whatmail">Enter the 4-digit code <b>{data.otp}</b> :</div>
         
         <div style={{display: "flex", margin:'16px 0px 40px'}} id="otp-container">
           <input  type="phone" minLength='1' maxLength="1" 
