@@ -7,7 +7,7 @@ import { Name } from "../LoginSignup/Name";
 import { Allset } from "../LoginSignup/Allset";
 import { Product } from "../productPage/product/Product";
 import { ProductDetails } from "../productPage/product/ProductDetails";
-import { Payment } from "../Cart/Payment";
+// import { Payment } from "../Cart/Payment";
 
 export const Routers = () => {
   return (
@@ -21,7 +21,7 @@ export const Routers = () => {
         <Route path="/allSet" element={<Allset/>} />
         <Route path="/product" element={<Product/>}/>
         <Route path="/product/:id" element={<ProductDetails/>}/>
-        <Route path="/payment" element={<Payment/>} />
+        {/* <Route path="/payment" element={<Payment/>} /> */}
       </Routes>
     </>
   );
