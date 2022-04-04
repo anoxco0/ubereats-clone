@@ -17,8 +17,7 @@
   },
   "scripts": {
     "start": "node server/index.js",
-    "build": "cd client && npm install && npm run build",
-    "build:client": "webpack --config webpack.config.js"
+    "build": "cd client && npm install && npm run build"
   },
   "engines": {
     "npm": "8.5.0",
