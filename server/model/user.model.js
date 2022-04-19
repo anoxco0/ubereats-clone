@@ -2,10 +2,11 @@ const mongoose=require('mongoose');
 const bcrypt=require('bcryptjs');
 
 const userSchama=new mongoose.Schema({
-    firstName:{type:"string",require:true,},
-    lastName:{type:"string",require:true},
-    email:{type:"string",require:true,unique:true},
-    password:{type:"string",require:true,}
+    firstName:{type:"String",require:true,},
+    lastName:{type:"String",require:true},
+    email:{type:"String",require:true,unique:true},
+    password:{type:"String",require:true},
+    ip:{type:"String",required:true}
 },{versionKey:false,timestamps:true});
 
 userSchama.methods.check=function(password){
