@@ -9,7 +9,7 @@
   const country = require('./model/country.model')
  
   const app = express();
-  
+  app.enable('trust proxy');
   app.use(express.json());
   // Have Node serve the files for our built React app
   app.use(express.static(path.resolve(__dirname, '../client/build')));

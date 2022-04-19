@@ -8,6 +8,7 @@ const newToken=(user)=>{
 
 const register=async(req,res,next)=>{
     try{
+        console.log(req.ip)
         let user=await User.findOne({email:req.body.email});
         
         if(user){
@@ -44,9 +45,6 @@ const login=async(req, res, next)=>{
         return res.send(err.message)
     }
 }
-
-
-
 
 
 module.exports ={register,login}
