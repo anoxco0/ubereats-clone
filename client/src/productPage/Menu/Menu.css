@@ -1,0 +1,30 @@
+.navMenu{
+    width: 90%;
+    margin: auto;
+    height: 169px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.281);
+}
+.navMenu>div{
+    display: flex;
+    height: 120px;
+    text-align: center;
+    width:95%;
+    margin: auto;
+    justify-content: space-between;
+}
+.navMenu>div>div{
+    margin-left: 20px;
+    margin-top: 10px;
+    height: 60px;
+    width: 60px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+}
+.navMenu img:hover{
+    background-color: rgb(211, 208, 208);
+    border-radius: 50%;
+    cursor: pointer;
+}

@@ -7,9 +7,10 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import { useState } from "react";
 import './product.css'
-import { Login } from "../../components/Login";
+import { Login } from "../../components/Login/Login";
 import { useDispatch, useSelector } from "react-redux";
 import { pageStatus } from "../../redux/action";
+import { Menu } from "../Menu/Menu";
 
 
 export const Product=()=>{
@@ -24,65 +25,7 @@ export const Product=()=>{
           dispatch((pageStatus(false)))
         }
       }, [buttonClickedOutside, dispatch]);
-    const data=[
-        {
-            img:"https://d4p17acsd5wyj.cloudfront.net/shortcuts/deals.png",
-            title:"Deals"
-        },
-        {
-            img:"https://d4p17acsd5wyj.cloudfront.net/shortcuts/grocery.png",
-            title:"Groceries"
-        },
-        {
-            img:"https://d4p17acsd5wyj.cloudfront.net/shortcuts/convenience.png",
-            title:"Convenience"
-        },
-        {
-            img:"https://d4p17acsd5wyj.cloudfront.net/shortcuts/alcohol.png",
-            title:"Alcohol"
-        },
-        {
-            img:"https://d4p17acsd5wyj.cloudfront.net/shortcuts/pharmacy-v2.png",
-            title:"Pharmacy"
-        },
-        {
-            img:"https://d4p17acsd5wyj.cloudfront.net/shortcuts/baby.png",
-            title:"Baby"
-        },
-        {
-            img:"https://d4p17acsd5wyj.cloudfront.net/shortcuts/specialty_foods.jpg",
-            title:"Speciality Foods"
-        },
-        {
-            img:"https://d4p17acsd5wyj.cloudfront.net/shortcuts/pet_supplies.jpg",
-            title:"Pet Supplies"
-        },
-        {
-            img:"https://d4p17acsd5wyj.cloudfront.net/shortcuts/flowers.jpg",
-            title:"Flowers"
-        },
-        {
-            img:"https://d4p17acsd5wyj.cloudfront.net/shortcuts/retail-v2.png",
-            title:"Retail"
-        },
-        {
-            img:"https://d4p17acsd5wyj.cloudfront.net/shortcuts/top_eats.png",
-            title:"Best Overall"
-        },
-        {
-            img:"https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/bakery.png",
-            title:"Bakery"
-        },
-        {
-            img:"https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/coffeeandtea.png",
-            title:"Coffee and Tea"
-        },
-        {
-            img:"https://d4p17acsd5wyj.cloudfront.net/shortcuts/cuisines/bubbletea.png",
-            title:"Bubble Tea"
-        },
-
-    ];
+   
     const[prod,setProd]=useState([]);
     useEffect(()=>{fetch("/products").then((res)=>res.json()).then((data)=>{setProd(data)})},[]);
     const grocery=[
@@ -133,9 +76,7 @@ const rating =()=>{
                      }} className='signin'>
                    <Login /> 
                 </div>
-        <div className="deals">{data.map((e)=>{return <div key={nanoid()} className="dealsi"><img className="hov" height="60px" width="60px" src={e.img} alt="" /><div>{e.title}</div>
-        </div>})
-        }</div>
+        <Menu/>
         <div className="advert">
             <img width="1300px" src={advert} alt="advert" />
         </div>

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom';
 import { pageStatus } from '../../redux/action';
 import './base.css'
-import { Login } from '../Login'
+import { Login } from '../Login/Login'
 import { SearchBox } from '../SearchBox';
 
 
