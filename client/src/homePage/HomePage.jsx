@@ -1,9 +1,9 @@
 import { useDispatch } from "react-redux"
-import { Base } from "../components/Base"
-import { Bussiness } from "../components/Bussiness"
-import { Footer } from "../components/Footer"
-import { Maps } from "../components/Maps"
-import { Navbar } from "../components/Navbar"
+import { Base } from "../components/Base/Base"
+import { Bussiness } from "../components/Bussiness/Bussiness"
+import { Footer } from "../components/Footer/Footer"
+import { Maps } from "../components/Maps/Maps"
+import { Navbar } from "../components/Navbar/Navbar";
 import { navSearch, setNavBg } from "../redux/action"
 
 

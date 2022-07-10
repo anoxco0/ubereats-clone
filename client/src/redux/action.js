@@ -13,3 +13,4 @@ export const navSearch = (bg) =>({type:NAV_SEARCH,payload:bg})
 export const email = (em) =>({type:EMAIL, payload:em});
 export const password = (pas) =>({type:PASSWORD,payload:pas});
 export const emailStatus = (em)=>({type:EMAIL_STATUS,payload:em});
+

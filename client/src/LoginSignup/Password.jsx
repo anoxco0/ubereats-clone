@@ -2,17 +2,18 @@ import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom"
 import { password } from "../redux/action";
+import { login } from "../redux/Login/action";
 import { Nav } from "./Nav"
 
 
 export const Password = ()=>{
+  const dispatch = useDispatch();
     const emailStatus=useSelector(store=>store.emailStatus.emailStatus)
     const [bgcolor, setBgColor]=useState('#EEEEEE');
     const [color,setColor] = useState('#AFAFAF');
     const [jumpStatus, setJumpStatus] = useState(false);
     const [pass,setPass] = useState('')
     const navigate = useNavigate();
-    const dispatch = useDispatch();
     useEffect(()=>{
     },[setBgColor,setColor])
     const handlechange = (e) => {
@@ -40,18 +41,19 @@ export const Password = ()=>{
       const Email = useSelector(store=>store.email.email)
       const handlesubmit=(e)=>{
           const {value} = e.target;
-          if(emailStatus===true){
-            fetch("/login",{
-                headers: {
-                  'Accept': 'application/json',
-                  'Content-Type': 'application/json'
-                },
-                method: "POST",
-                body: JSON.stringify({ email:Email,password:pass })
-            })
-            .then((res)=>res.json()).then((data)=>{localStorage.setItem('user',JSON.stringify(data))})
-            .catch(res=>res.json())
 
+          if(emailStatus===true){
+            dispatch(login({email:Email,password:pass}));
+            // fetch("/login",{
+            //     headers: {
+            //       'Accept': 'application/json',
+            //       'Content-Type': 'application/json'
+            //     },
+            //     method: "POST",
+            //     body: JSON.stringify({ email:Email,password:pass })
+            // })
+            // .then((res)=>res.json()).then((data)=>{localStorage.setItem('user',JSON.stringify(data))})
+            // .catch(res=>res.json())
             navigate('/')
           }
           else if(value==='next'&&pass.length>=8){

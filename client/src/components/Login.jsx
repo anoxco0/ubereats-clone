@@ -1,7 +1,9 @@
+// import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom'
 import './login.css'
 
 export const Login = () =>{
+    // const {username} = useSelector(store=>store.username)
     const user = JSON.parse(localStorage.getItem('user'));
     const removeLocalSorage = () =>{
         localStorage.setItem('user',JSON.stringify('lock'))

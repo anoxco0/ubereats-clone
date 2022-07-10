@@ -1,0 +1,20 @@
+.bussiness{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 80px 0px;
+}
+.buss{
+    width: 30%;
+}
+
+@media only screen and (max-width:682px){
+    .bussiness{
+        flex-direction: column;
+        gap: 40px;
+    }
+    .buss{
+        width:100%;
+    }
+}

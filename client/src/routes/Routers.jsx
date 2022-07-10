@@ -21,7 +21,7 @@ export const Routers = () => {
         <Route path="/allSet" element={<Allset/>} />
         <Route path="/product" element={<Product/>}/>
         <Route path="/product/:id" element={<ProductDetails/>}/>
-        {/* <Route path="/payment" element={<Payment/>} /> */}
+        {/* <Route path="*" element={""}/> */}
       </Routes>
     </>
   );
