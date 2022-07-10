@@ -61,13 +61,13 @@ export const Navbar = () => {
             <input type="text" name="" id="" placeholder="Food, groceries, drinks, etc" />
         </div>
         <div className="navButtons">
-            <div style={{backgroundColor:"black", color:"white"}}>
+            <div style={{backgroundColor:"black", color:"white"}} onClick={()=>navigate()}>
                 <div style={{width:"20px"}}><Cart color={"white"}/> </div> <div>Cart</div>
             </div>
-            <div>
-                <div style={{width:"20px"}}><Login/> </div><div>Cart</div>
+            <div onClick={()=>navigate('/email')}>
+                <div style={{width:"20px"}}><Login/> </div><div>Login</div>
             </div>
-            <div> Signup</div>
+            <div onClick={()=>navigate('/email')}> Signup</div>
         </div>
       </div>
     </div>
